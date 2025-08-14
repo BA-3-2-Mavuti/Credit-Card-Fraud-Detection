@@ -28,7 +28,7 @@ It uses:
 - Mpho Matseka (Project Lead)
 - Ntando Mbekwa
 - Makhube Theoha
-- Katleho Letsoho
+- Katleho Samuel Letsoho
 - Pitso Nkotolane 
 - Dikeledi Madiboko
 - Ayanda Ngamlana
