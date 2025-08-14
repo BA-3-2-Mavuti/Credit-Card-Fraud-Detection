@@ -34,6 +34,7 @@ It uses:
 - Ayanda Ngamlana
 - Zizipho Bulawa
 - Palesa Mofokeng
+- Zackaria Matshile Kgoale
 
 ## 🚀 How to Run
 1. Clone this repository:
