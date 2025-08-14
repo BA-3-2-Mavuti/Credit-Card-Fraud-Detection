@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Data files (avoid committing raw datasets)
+data/*.csv
+data/*.xlsx
+data/*.xls
+data/*.pdf
+data/*.jpg
+data/*.jpeg
+data/*.png
+data/*.json
+
+# Model files
+models/*.h5
+models/*.pkl
+models/*.joblib
+
+# OS system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
