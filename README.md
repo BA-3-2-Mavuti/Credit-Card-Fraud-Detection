@@ -29,14 +29,16 @@ It uses:
 - Ntando Mbekwa
 - Makhube Theoha
 - Katleho Letsoho
-- Pitso
-- Dikeledi
-- Ayanda
+- Pitso Nkotolane 
+- Dikeledi Madiboko
+- Ayanda Ngamlana
+- Zizipho Bulawa
+- Palesa Mofokeng
 
 ## 🚀 How to Run
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<org-name>/<repo-name>.git
+   git clone https://github.com/BA-3-2-Mavuti/Loan_Fraud_Detector/tree/main.git
 
 2. Navigate into the folder:
 
@@ -44,7 +46,6 @@ It uses:
 cd <repo-name>
 ```
 3. Install dependencies:
-
 ```
 pip install -r requirements.txt
 ```
