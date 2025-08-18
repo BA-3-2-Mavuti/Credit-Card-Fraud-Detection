@@ -30,7 +30,7 @@ It uses:
 - Makhube Theoha
 - Katleho Samuel Letsoho
 - Pitso Nkotolane 
-- Dikeledi Madiboko
+- Dikeledi Madibogo
 - Ayanda Ngamlana
 - Zizipho Bulawa
 - Palesa Mofokeng
