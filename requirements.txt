@@ -7,3 +7,8 @@ nltk
 spacy
 matplotlib
 seaborn
+streamlit
+python-dotenv
+pdf2image
+imbalanced-learn
+joblib
