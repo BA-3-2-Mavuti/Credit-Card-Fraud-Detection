@@ -1,55 +1,97 @@
 # Financial Document Fraud Detection AI
 
-## 📌 Overview
-This project is an AI-powered system that processes financial documents (e.g., payslips, bank statements) to extract important details and detect possible fraud.  
-It uses:
-- **OCR (Optical Character Recognition)** to read documents
-- **NLP (Natural Language Processing)** to extract structured data
-- **Machine Learning** to flag fraudulent applications and assign a trust score
+## Overview
+AI system to extract structured data from financial documents (payslips, bank statements) and assess fraud risk using OCR + NLP + ML.
 
-## 🎯 Goals
-1. Automate document processing in financial applications.
-2. Detect fraudulent or falsified information in loan/credit applications.
-3. Provide a fraud risk score for each processed application.
+## Features
+- OCR (Tesseract) text extraction
+- NLP parsing & field normalization
+- Feature engineering & fraud scoring
+- Trust / risk scoring output
 
-## 🛠 Tech Stack
-- **Python 3.x**
-- **Libraries**: pandas, numpy, scikit-learn, pytesseract, OpenCV, spaCy/NLTK
-- **Tools**: GitHub, Google Colab / VS Code
+## Tech Stack
+Python 3.11+
+pytesseract, OpenCV
+pandas, numpy, scikit-learn
+spaCy (or NLTK)
+(Planned) FastAPI for inference
 
-## 📂 Project Structure
-/data -> datasets (CSV, PDF, images)
-/docs -> reports, planning documents
-/models -> saved ML models
-/notebooks -> Jupyter/Colab notebooks for testing
-/src -> source code for OCR, NLP, ML, integration
+## Prerequisites
+1. Install Tesseract:
+   - Windows (Chocolatey): `choco install tesseract`
+   - Or download installer: https://github.com/tesseract-ocr/tesseract
+2. (If using spaCy) `pip install spacy && python -m spacy download en_core_web_sm`
+3. Python 3.11 recommended.
 
-## 👨‍💻 Team Members
-- Mpho Matseka (Project Lead)
+## Quick Start
+```bash
+git clone https://github.com/BA-3-2-Mavuti/Loan_Fraud_Detector.git
+cd Loan_Fraud_Detector
+
+python -m venv .venv
+.\.venv\Scripts\activate          # Windows
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# Optional: verify tesseract path
+tesseract --version
+```
+
+## Project Structure
+```text
+data/
+  raw/            # original docs (PDF, images) - not committed
+  processed/      # cleaned text / extracted fields
+docs/
+models/           # saved models / vectorizers
+notebooks/
+src/
+  main_pipeline.py
+  ocr/
+  nlp/
+  features/
+  modeling/
+  api/            # (future)
+tests/
+```
+
+## Running the Pipeline
+```bash
+python src/main_pipeline.py --input data/raw --out data/processed
+```
+
+## Example (OCR -> Fraud Score)
+```bash
+python src/ocr/extract.py --file data/raw/sample_payslip.png --out temp/extracted.json
+python src/modeling/predict.py --input temp/extracted.json --model models/latest.joblib
+```
+
+## Configuration
+Planned central config file under `configs/` (e.g. YAML) for thresholds, feature flags.
+
+## Team
+- Mpho Matseka (Lead)
 - Ntando Mbekwa
 - Makhube Theoha
 - Katleho Samuel Letsoho
-- Pitso Nkotolane 
+- Pitso Nkotolane
 - Dikeledi Madiboko
 - Ayanda Ngamlana
 - Zizipho Bulawa
 - Palesa Mofokeng
 - Zackaria Matshile Kgoale
 
-## 🚀 How to Run
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/BA-3-2-Mavuti/Loan_Fraud_Detector/tree/main.git
+## Data & Privacy
+Do not commit real customer documents. Use redacted or synthetic samples.
 
-2. Navigate into the folder:
+## Roadmap
+- [ ] Add FastAPI inference service
+- [ ] Add model training script
+- [ ] Add unit tests & CI
+- [ ] Add drift monitoring
 
-  ```
-cd <repo-name>
-```
-3. Install dependencies:
-```
-pip install -r requirements.txt
-```
-4. Run the main pipeline:
-```
-python src/main_pipeline.py
+## Contributing
+Create a feature branch, open PR with tests. Run `pytest` before submitting.
+
+## License
+Add a LICENSE file (MIT / Apache-2.0 recommended).
