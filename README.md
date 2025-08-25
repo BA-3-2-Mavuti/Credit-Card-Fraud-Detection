@@ -28,12 +28,13 @@ It uses:
 - Mpho Matseka (Project Lead)
 - Ntando Mbekwa
 - Makhube Theoha
-- Katleho Letsoho
+- Katleho Samuel Letsoho
 - Pitso Nkotolane 
-- Dikeledi Madiboko
+- Dikeledi Madibogo
 - Ayanda Ngamlana
 - Zizipho Bulawa
 - Palesa Mofokeng
+- Zackaria Matshile Kgoale
 
 ## 🚀 How to Run
 1. Clone this repository:
