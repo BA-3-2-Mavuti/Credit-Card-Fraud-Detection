@@ -1,97 +1,94 @@
-# Financial Document Fraud Detection AI
+# AI-Powered Credit Card Fraud Detection
+**Vaal University of Technology | AIBUY3A - Business Analysis 3.2**
+---
 
-## Overview
-AI system to extract structured data from financial documents (payslips, bank statements) and assess fraud risk using OCR + NLP + ML.
+## 1. Project Overview
 
-## Features
-- OCR (Tesseract) text extraction
-- NLP parsing & field normalization
-- Feature engineering & fraud scoring
-- Trust / risk scoring output
+This repository contains the work for the Business Analysis 3.2 project. The project proposes a real-time, AI-powered solution to detect fraudulent credit card transactions, addressing a critical challenge within the financial industry as part of the Fourth Industrial Revolution (4IR).
 
-## Tech Stack
-Python 3.11+
-pytesseract, OpenCV
-pandas, numpy, scikit-learn
-spaCy (or NLTK)
-(Planned) FastAPI for inference
+The system is designed as a supervised machine learning pipeline that ingests transaction data, performs feature engineering, and classifies each transaction as either legitimate or fraudulent, providing a probability score to aid human investigators.
 
-## Prerequisites
-1. Install Tesseract:
-   - Windows (Chocolatey): `choco install tesseract`
-   - Or download installer: https://github.com/tesseract-ocr/tesseract
-2. (If using spaCy) `pip install spacy && python -m spacy download en_core_web_sm`
-3. Python 3.11 recommended.
+## 2. Problem Statement
 
-## Quick Start
-```bash
-git clone https://github.com/BA-3-2-Mavuti/Loan_Fraud_Detector.git
-cd Loan_Fraud_Detector
+Credit card fraud is a major threat to financial institutions, leading to significant monetary losses and eroding customer trust. Traditional rule-based systems are often static and fail to adapt to the dynamic and sophisticated tactics used by fraudsters. They generate a high number of false positives (blocking legitimate transactions) and can miss novel fraud patterns, leading to both financial loss and poor customer experience.
 
-python -m venv .venv
-.\.venv\Scripts\activate          # Windows
-pip install --upgrade pip
-pip install -r requirements.txt
+Our solution aims to overcome these limitations by using a machine learning model that can learn from historical data to identify complex, non-obvious patterns indicative of fraud.
 
-# Optional: verify tesseract path
-tesseract --version
-```
+## 3. The AI Solution
 
-## Project Structure
+We have developed a proof-of-concept model using Python and core data science libraries. The key components of the solution are:
+
+-   **Data Preprocessing:** Cleaning and preparing raw transaction data for modeling.
+-   **Feature Engineering:** Creating new, informative features from the data (e.g., transaction frequency, time-based patterns).
+-   **Handling Class Imbalance:** Using the SMOTE (Synthetic Minority Over-sampling Technique) to address the rarity of fraud examples in the dataset, ensuring the model learns effectively.
+-   **Model Training:** Implementing and comparing several classification algorithms, including Logistic Regression (as a baseline) and Random Forest (as a more advanced model).
+-   **Evaluation:** Assessing model performance using metrics appropriate for imbalanced datasets.
+
+## 4. Tech Stack
+
+-   **Language:** Python 3.x
+-   **Core Libraries:**
+    -   `pandas` & `numpy`: For data manipulation and numerical operations.
+    -   `scikit-learn`: For building and evaluating machine learning models.
+    -   `imbalanced-learn`: For handling class imbalance with SMOTE.
+    -   `matplotlib` & `seaborn`: For data visualization and analysis.
+    -   `jupyter`: For creating reproducible analysis notebooks.
+    -   `joblib`: For saving and loading trained models.
+-   **Project Management:** GitHub Projects
+
+## 5. Repository Structure
 ```text
-data/
-  raw/            # original docs (PDF, images) - not committed
-  processed/      # cleaned text / extracted fields
-docs/
-models/           # saved models / vectorizers
-notebooks/
-src/
-  main_pipeline.py
-  ocr/
-  nlp/
-  features/
-  modeling/
-  api/            # (future)
-tests/
+The repository is organized as follows to ensure clarity and reproducibility:
+├── assets/                # Images and visual assets (e.g., social preview)
+├── data/                  # Raw and processed datasets
+├── models/                # Saved trained models (e.g., .joblib files)
+├── notebooks/             # Jupyter notebooks for EDA, model training, and evaluation
+├── reports/               # Final project report and poster
+├── src/                   # Reusable Python scripts and helper functions
+├── .gitignore             # Files and folders to ignore
+├── README.md              # This file
+└── requirements.txt       # Python dependencies for easy setup
 ```
 
-## Running the Pipeline
-```bash
-python src/main_pipeline.py --input data/raw --out data/processed
-```
 
-## Example (OCR -> Fraud Score)
-```bash
-python src/ocr/extract.py --file data/raw/sample_payslip.png --out temp/extracted.json
-python src/modeling/predict.py --input temp/extracted.json --model models/latest.joblib
-```
+## 6. Getting Started
 
-## Configuration
-Planned central config file under `configs/` (e.g. YAML) for thresholds, feature flags.
+To replicate the analysis and run the models, please follow these steps:
 
-## Team
-- Mpho Matseka (Lead)
-- Ntando Mbekwa
-- Makhube Theoha
-- Katleho Samuel Letsoho
-- Pitso Nkotolane
-- Dikeledi Madiboko
-- Ayanda Ngamlana
-- Zizipho Bulawa
-- Palesa Mofokeng
-- Zackaria Matshile Kgoale
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/BA-3-2-Mavuti/Credit-Card-Fraud-Detection.git](https://github.com/BA-3-2-Mavuti/Credit-Card-Fraud-Detection.git)
+    cd Credit-Card-Fraud-Detection
+    ```
+2.  **Set up a virtual environment (recommended):**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+3.  **Install the required dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+4.  **Download the Dataset:**
+    -   Download the credit card fraud dataset from your source (e.g., Kaggle).
+    -   Place the `.csv` file inside the `data/` directory.
 
-## Data & Privacy
-Do not commit real customer documents. Use redacted or synthetic samples.
+5.  **Run the Jupyter Notebooks:**
+    -   Launch Jupyter Lab:
+        ```bash
+        jupyter lab
+        ```
+    -   Open the `notebooks/` directory and run the notebooks in sequential order.
 
-## Roadmap
-- [ ] Add FastAPI inference service
-- [ ] Add model training script
-- [ ] Add unit tests & CI
-- [ ] Add drift monitoring
+## 7. Team
 
-## Contributing
-Create a feature branch, open PR with tests. Run `pytest` before submitting.
-
-## License
-Add a LICENSE file (MIT / Apache-2.0 recommended).
+-   Mpho Matseka (Lead)
+-   Ntando Mbekwa
+-   Makhube Theoha
+-   Katleho Samuel Letsoho
+-   Pitso Nkotolane
+-   Dikeledi Madiboko
+-   Ayanda Ngamlana
+-   Zizipho Bulawa
+-   Palesa Mofokeng
+-   Zackaria Matshile Kgoale
