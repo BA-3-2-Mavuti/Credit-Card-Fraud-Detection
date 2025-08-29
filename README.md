@@ -69,9 +69,10 @@ To replicate the analysis and run the models, please follow these steps:
     ```bash
     pip install -r requirements.txt
     ```
-4.  **Download the Dataset:**
-    -   Download the credit card fraud dataset from your source (e.g., Kaggle).
-    -   Place the `.csv` file inside the `data/` directory.
+4. **Download the Dataset (IMPORTANT):**
+    -   The dataset is too large to be included in this repository.
+    -   Download it from the official source on Kaggle: [Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
+    -   After downloading, place the `creditcard.csv` file inside the `data/` directory in this project.
 
 5.  **Run the Jupyter Notebooks:**
     -   Launch Jupyter Lab:
