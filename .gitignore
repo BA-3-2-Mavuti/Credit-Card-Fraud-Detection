@@ -1,36 +1,40 @@
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+Byte-compiled / optimized / DLL files
+pycache/
+*.py[cod]
+*$py.class
 
-# Virtual environments
-.venv/
+Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+Environments
+.env
+.venv
 env/
 venv/
 ENV/
+env.bak/
+venv.bak/
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
+Project-specific ignores
+--- IMPORTANT ---
+Ignore the dataset in the data folder to prevent it from being uploaded to GitHub
+/data/creditcard.csv
 
-# Data files (avoid committing raw datasets)
-data/*.csv
-data/*.xlsx
-data/*.xls
-data/*.pdf
-data/*.jpg
-data/*.jpeg
-data/*.png
-data/*.json
-
-# Model files
-models/*.h5
-models/*.pkl
-models/*.joblib
-
-# OS system files
-.DS_Store
-Thumbs.db
-
-# VS Code settings
-.vscode/
+Ignore saved models if they become large
+/models/*.joblib
