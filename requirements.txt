@@ -1,14 +1,8 @@
-numpy
 pandas
+numpy
 scikit-learn
-opencv-python
-pytesseract
-nltk
-spacy
+imbalanced-learn
 matplotlib
 seaborn
-streamlit
-python-dotenv
-pdf2image
-imbalanced-learn
+jupyter
 joblib
