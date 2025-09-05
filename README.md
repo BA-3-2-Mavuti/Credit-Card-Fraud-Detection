@@ -88,7 +88,7 @@ To replicate the analysis and run the models, please follow these steps:
 -   Makhube Theoha
 -   Katleho Samuel Letsoho
 -   Pitso Nkotolane
--   Dikeledi Madiboko
+-   Dikeledi Madibogo
 -   Ayanda Ngamlana
 -   Zizipho Bulawa
 -   Palesa Mofokeng
