@@ -30,7 +30,6 @@ We have developed a proof-of-concept model using Python and core data science li
 -   **Core Libraries:**
     -   `pandas` & `numpy`: For data manipulation and numerical operations.
     -   `scikit-learn`: For building and evaluating machine learning models.
-    -   `imbalanced-learn`: For handling class imbalance with SMOTE.
     -   `matplotlib` & `seaborn`: For data visualization and analysis.
     -   `jupyter`: For creating reproducible analysis notebooks.
     -   `joblib`: For saving and loading trained models.
