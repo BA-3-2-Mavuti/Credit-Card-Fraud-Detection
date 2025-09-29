@@ -15,14 +15,25 @@ Credit card fraud is a major threat to financial institutions, leading to signif
 Our solution aims to overcome these limitations by using a machine learning model that can learn from historical data to identify complex, non-obvious patterns indicative of fraud.
 
 ## 3. The AI Solution
+-Load Data: We loaded the transactions dataset and checked for missing values and column types.
 
-We have developed a proof-of-concept model using Python and core data science libraries. The key components of the solution are:
+-Select Features: The id column was removed, and Class was used as the target (fraud or not fraud).
 
--   **Data Preprocessing:** Cleaning and preparing raw transaction data for modeling.
--   **Feature Engineering:** Creating new, informative features from the data (e.g., transaction frequency, time-based patterns).
--   **Handling Class Imbalance:** Using the SMOTE (Synthetic Minority Over-sampling Technique) to address the rarity of fraud examples in the dataset, ensuring the model learns effectively.
--   **Model Training:** Implementing and comparing several classification algorithms, including Logistic Regression (as a baseline) and Random Forest (as a more advanced model).
--   **Evaluation:** Assessing model performance using metrics appropriate for imbalanced datasets.
+-Split Data: The dataset was split into training (80%) and testing (20%) sets to check the model on unseen data.
+
+-Explore Data: We made a correlation heatmap and a cumulative fraud plot to understand patterns and trends in fraud cases.
+
+-Baseline Model: We trained a Logistic Regression model as a first test, using feature scaling and balancing for rare fraud cases.
+
+-Advanced Model: We trained a Random Forest model, which is better at finding complex patterns and detecting fraud.
+
+-Check Performance: We used metrics like F1-score, accuracy, ROC-AUC, and confusion matrices to see how well the model works.
+
+-Error Analysis: We looked at false positives (normal transactions flagged as fraud) and false negatives (fraud missed) to understand mistakes.
+
+-Save Model: The trained model and scaler were saved, so we can use them later without retraining.
+
+-Chatbot Deployment: We made a simple chatbot where users enter a Transaction ID and it tells them if it is frau or not fraud .
 
 ## 4. Tech Stack
 
