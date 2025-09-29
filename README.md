@@ -19,7 +19,7 @@ Our solution aims to overcome these limitations by using a machine learning mode
 
 -Select Features: The id column was removed, and Class was used as the target (fraud or not fraud).
 
--Split Data: The dataset was split into training (80%) and testing (20%) sets to check the model on unseen data.
+-Split Data: The dataset was split into training and testing sets to check the model on unseen data.
 
 -Explore Data: We made a correlation heatmap and a cumulative fraud plot to understand patterns and trends in fraud cases.
 
