@@ -40,3 +40,4 @@ data/creditcard_clean.csv
 Ignore saved models if they become large
 /models/*.joblib
 data/creditcard_clean.csv
+data/creditcard_clean.csv
