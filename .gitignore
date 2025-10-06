@@ -35,6 +35,7 @@ Project-specific ignores
 --- IMPORTANT ---
 Ignore the dataset in the data folder to prevent it from being uploaded to GitHub
 /data/creditcard.csv
+data/creditcard_clean.csv
 
 Ignore saved models if they become large
 /models/*.joblib
